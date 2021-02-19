@@ -15,9 +15,17 @@ read the tests in the test file.
 class Animal {
   constructor(name) {
     this.name = name;
-    this.age = 1;
+    this.age = 0;
+    this.legs = 4;
+    this.sound = "Squeak";
   }
-
+  getOlder() {
+    this.age += 1;
+    return this.age;
+  }
+  speak() {
+    return this.sound;
+  }
 }
 
 module.exports = Animal;

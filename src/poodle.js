@@ -14,8 +14,18 @@ write related tests in the test file.
 
 ---------------------- */
 
-const Dog = require('./dog');
+const Dog = require("./dog");
 
-class Poodle {}
+class Poodle extends Dog {
+  constructor(name) {
+    super(name);
+    this.breed = "Poodle";
+    this.haircuts = 0;
+  }
+  lifetimeHaircuts() {
+    this.haircuts = this.age * 7;
+    return this.haircuts;
+  }
+}
 
 module.exports = Poodle;

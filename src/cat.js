@@ -15,8 +15,37 @@ write related tests in the test file.
 
 ---------------------- */
 
-const Animal = require('./animal');
+const Animal = require("./animal");
 
-class Cat {}
+class Cat extends Animal {
+  constructor(name) {
+    super(name);
+    this.sound = "meow";
+    this.favouriteFood = "cat food";
+    this.humanYears = 0;
+    this.treats = 0;
+  }
+  speak() {
+    return this.sound;
+  }
+  getOlder() {
+    if (this.humanYears === 0) {
+      this.age = 15;
+      this.humanYears++;
+    } else if (this.humanYears === 1) {
+      this.age = 24;
+      this.humanYears++;
+    } else {
+      this.age += 4;
+      this.humanYears++;
+    }
+    return this.age;
+  }
+
+  feed() {
+    this.treats++;
+    return this.treats;
+  }
+}
 
 module.exports = Cat;
