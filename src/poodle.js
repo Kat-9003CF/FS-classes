@@ -23,7 +23,7 @@ class Poodle extends Dog {
     this.haircuts = 0;
   }
   lifetimeHaircuts() {
-    this.haircuts = this.age * 7;
+    this.haircuts = this.age; //7 haircuts per human year, NOT dog year
     return this.haircuts;
   }
 }

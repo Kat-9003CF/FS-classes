@@ -26,7 +26,7 @@ describe("Poodles", () => {
     it("lifetime haircuts should equal age x 7", () => {
       poodle.getOlder();
       poodle.lifetimeHaircuts();
-      expect(poodle.haircuts).to.equal(poodle.age * 7);
+      expect(poodle.haircuts).to.equal(poodle.age);
     });
   });
 });
